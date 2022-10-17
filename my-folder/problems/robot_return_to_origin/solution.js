@@ -23,12 +23,8 @@ const setPosition = () => {
       
       })
 
-        if (x === 0 && y === 0) {
-            return true
-        } else {
+     return x === 0 && y === 0
       
-           return false
-        }
   }
 }
 
