@@ -1,14 +1,13 @@
-/**
- * @param {number} x
- * @return {boolean}
- */
+var isPalindrome = function (x) {
+  let stringNum = x.toString();
+  let leftPointer = 0;
+  let rightPointer = stringNum.length - 1;
 
-var isPalindrome = function(x) {
-    
-    return x === Number([...x.toString().split('')].reverse().join(''));
-   
-}
+  while (leftPointer < stringNum.length / 2) {
+    if (stringNum[leftPointer] !== stringNum[rightPointer]) return false;
 
-
-// take x -> turn into string -> turn into array -> reverse it -> turn back into int
-//compare it to original int
+    leftPointer++;
+    rightPointer--;
+  }
+  return true;
+};
